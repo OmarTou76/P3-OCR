@@ -1,0 +1,24 @@
+.footer{
+    @include container;
+    height: 12.5rem;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    & > h2{
+        @include shrikhand;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        & > li{
+            font-size: 1rem;
+
+            & > svg {
+                margin-right: 0.5rem;
+                height: 0.9rem;
+                width: 0.9rem;
+            }
+        }
+    }
+}

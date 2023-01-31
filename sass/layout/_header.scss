@@ -1,0 +1,19 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    position: relative;
+    @include shadow;
+    &__logo{
+        height: 1.7rem;
+    }
+    &__back{
+        position: absolute;
+        left: 0.5rem;
+        svg{
+            stroke-width: 2.5;
+        }
+    }
+}
