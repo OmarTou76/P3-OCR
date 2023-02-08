@@ -1,19 +1,21 @@
-.header{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    position: relative;
+.header {
     @include shadow;
-    &__logo{
+
+    &__wrapper {
+        @include desktop_max;
+        @include container;
+        align-items: center;
+        height: 3.5rem;
+        position: relative;
+    }
+
+    &__logo {
         height: 1.7rem;
     }
-    &__back{
+
+    &__back {
         position: absolute;
-        left: 0.5rem;
-        svg{
-            stroke-width: 2.5;
-        }
+        left: 1.5rem;
+        font-size: 1.3rem;
     }
 }

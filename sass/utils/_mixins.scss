@@ -2,6 +2,11 @@
     font-family: 'Shrikhand', sans-serif;
 }
 
+@mixin desktop_max {
+    max-width: 1440px;
+    margin: auto;
+}
+
 @mixin text_title ($size: 1rem) {
     font-size: $size;
     font-weight: 700;
@@ -12,53 +17,40 @@
     font-weight: 300;
 }
 
-@mixin container($padding_Y: 0rem, $padding_X: 1rem, $gap: $gap) {
-    padding: $padding_Y $padding_X;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: $gap;
-}
-
 @mixin shadow($color: gray) {
     box-shadow: 0px 5px 8px -5px $color;
 }
 
-@mixin gradient {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-}
-
-@mixin btn_grad {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 1.5rem;
-    font-weight: 300;
-    color: white;
-    border: none;
-    @include shadow;
-    @include gradient;
-}
-
-@mixin icon($icon, $left_position: -1.8rem) {
-    &::before {
-        content: url("/public/icons/#{$icon}");
-        position: absolute;
-        left: $left_position;
-        top: -0.1rem;
-        width: 1.2rem;
-        height: 1.2rem;
-    }
+@mixin background_heart {
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @mixin heart {
-    stroke-width: 1;
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
+    font-size: 1.8rem;
+    color: transparent;
+    background-clip: text;
+    -webkit-text-stroke: 0.5px black;
+    background: transparent;
 
     &:hover {
-        fill: url("#gradient");
-        stroke-width: 0;
+        animation: fill_icon .5s linear;
+        -webkit-text-stroke: 0px;
+        background: $gradient;
+        @include background_heart;
+    }
+}
+
+@keyframes fill_icon {
+    0% {
+        background: transparent;
+        @include background_heart;
+    }
+
+    100% {
+        background: $color-secondary;
+        @include background_heart;
     }
 }

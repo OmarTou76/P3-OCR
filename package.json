@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Oh My Food",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/home.scss:./public/css/home.css ./sass/menu.scss:./public/css/menu.css"
   },
   "keywords": [],
   "author": "",
