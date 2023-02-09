@@ -1,0 +1,41 @@
+.loader {
+    @include spinner;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: $color-light-gray;
+    animation: hidden 2500ms;
+    opacity: 0;
+    z-index: -1;
+
+    &>i {
+        animation-name: spinner;
+        animation-duration: 2500ms;
+        animation-timing-function: linear;
+        font-size: 10rem;
+        background: gradient($color-secondary, $color-primary);
+        @include background_heart;
+    }
+}
+
+@keyframes hidden {
+    0% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    90% {
+        opacity: .8;
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}

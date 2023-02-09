@@ -23,12 +23,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 0.5rem;
+        letter-spacing: 1px;
     }
 
     &__container {
         @include container($padding_X: 0rem);
         @include section_menu;
-
     }
 
     &__order {

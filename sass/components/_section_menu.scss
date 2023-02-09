@@ -17,6 +17,7 @@
             }
         }
 
+
         @include badge_menu;
     }
 
@@ -24,15 +25,16 @@
 
         &__section {
             flex: 0 49.5%;
+            max-width: 49.5%;
             padding: 0;
         }
 
     }
 
-    /* @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
 
         &__section {
-            flex-basis: 33%;
+            max-width: 32%;
         }
-    } */
+    }
 }

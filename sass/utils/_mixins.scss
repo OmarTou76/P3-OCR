@@ -2,6 +2,7 @@
     font-family: 'Shrikhand', sans-serif;
 }
 
+
 @mixin desktop_max {
     max-width: 1440px;
     margin: auto;
@@ -9,12 +10,14 @@
 
 @mixin text_title ($size: 1rem) {
     font-size: $size;
-    font-weight: 700;
+    font-weight: 500;
+    color: $gray-text;
 }
 
 @mixin text_info($size: 1rem) {
     font-size: $size;
     font-weight: 300;
+    color: $gray-text;
 }
 
 @mixin shadow($color: gray) {
@@ -29,28 +32,17 @@
 }
 
 @mixin heart {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: transparent;
     background-clip: text;
     -webkit-text-stroke: 0.5px black;
     background: transparent;
+    @include fill_icon;
 
     &:hover {
         animation: fill_icon .5s linear;
         -webkit-text-stroke: 0px;
-        background: $gradient;
-        @include background_heart;
-    }
-}
-
-@keyframes fill_icon {
-    0% {
-        background: transparent;
-        @include background_heart;
-    }
-
-    100% {
-        background: $color-secondary;
+        background: gradient($color-secondary, $color-primary);
         @include background_heart;
     }
 }

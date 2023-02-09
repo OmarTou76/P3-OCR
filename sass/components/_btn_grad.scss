@@ -6,7 +6,12 @@
     font-weight: 300;
     color: white;
     border: none;
-    background: $color-primary;
-    background: $gradient;
+    background: gradient($color-secondary, $color-primary);
     @include shadow;
+    transition: box-shadow .5s;
+
+    &:hover {
+        background: gradient(lighten($color-secondary, 6%), lighten($color-primary, 6%));
+        box-shadow: 5px 10px 15px -5px grey;
+    }
 }

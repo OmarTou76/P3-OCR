@@ -3,7 +3,13 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-light-gray: rgb(246, 246, 246);
 $color-gray: rgb(229, 229, 229);
-$gradient: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+
+$gray-text: rgb(88, 88, 88);
+
+@function gradient($from, $to) {
+    $gradient: linear-gradient(170deg, $from 0%, $to 100%);
+    @return $gradient
+}
 
 
 $gap: 1.5rem;
