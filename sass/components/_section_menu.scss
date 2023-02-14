@@ -1,6 +1,15 @@
 @mixin section_menu {
     &__section {
         @include container($padding_X: 0.5rem, $gap: 1rem);
+        @include menu_fade;
+
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-name: menu_fade;
+                animation-duration: #{$i * 0.5}s;
+                animation-iteration-count: 1;
+            }
+        }
 
         &>h2 {
             font-size: 0.9rem;

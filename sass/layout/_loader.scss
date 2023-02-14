@@ -1,5 +1,5 @@
 .loader {
-    @include spinner;
+    @include bounce;
     position: absolute;
     top: 0;
     height: 100vh;
@@ -12,16 +12,26 @@
     animation: hidden 2500ms;
     opacity: 0;
     z-index: -1;
+    gap: 1rem;
 
-    &>i {
-        animation-name: spinner;
-        animation-duration: 2500ms;
-        animation-timing-function: linear;
-        font-size: 10rem;
+
+    &__circle {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
         background: gradient($color-secondary, $color-primary);
-        @include background_heart;
+    }
+
+    @for $i from 1 through 3 {
+        &>:nth-child(#{$i}) {
+            animation-name: bounce;
+            animation-duration: 700ms;
+            animation-delay: #{$i * 0.1}s;
+            animation-iteration-count: infinite;
+        }
     }
 }
+
 
 @keyframes hidden {
     0% {

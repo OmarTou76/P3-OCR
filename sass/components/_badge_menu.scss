@@ -1,5 +1,5 @@
 @mixin badge_menu {
-    @include menu_fade;
+    //@include menu_fade;
 
     @include spinner;
 
@@ -14,13 +14,7 @@
         overflow-x: hidden;
 
 
-        @for $i from 1 through 5 {
-            &:nth-child(#{$i}) {
-                animation-name: menu_fade;
-                animation-duration: #{$i * 0.3}s;
-                animation-iteration-count: 1;
-            }
-        }
+
 
         &:hover .menu__container__section__item__price {
             margin-right: 3.5rem;
