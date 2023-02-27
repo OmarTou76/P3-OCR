@@ -7,6 +7,9 @@
         &__wrapper {
             background: $color-gray;
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center
         }
 
         @include desktop_max;
@@ -14,11 +17,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 2rem;
-        gap: .5rem;
 
         & input {
             height: 100%;
+            width: 8rem;
             background: none;
             border: none;
             font-size: 1rem;
