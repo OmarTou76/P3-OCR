@@ -94,9 +94,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  /* @media (min-width: map-get($breakpoints, desktop)) {
-      padding: $padding_Y calc($padding_X * 2.5);
-  } */
   align-items: center;
 }
 .reservation__info__wrapper {
@@ -148,9 +145,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  /* @media (min-width: map-get($breakpoints, desktop)) {
-      padding: $padding_Y calc($padding_X * 2.5);
-  } */
   max-width: 1440px;
   margin: auto;
 }
@@ -236,9 +230,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  /* @media (min-width: map-get($breakpoints, desktop)) {
-      padding: $padding_Y calc($padding_X * 2.5);
-  } */
   max-width: 1440px;
   margin: auto;
 }
@@ -339,9 +330,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  /* @media (min-width: map-get($breakpoints, desktop)) {
-      padding: $padding_Y calc($padding_X * 2.5);
-  } */
   align-items: center;
   height: 3.5rem;
   position: relative;
@@ -438,9 +426,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  /* @media (min-width: map-get($breakpoints, desktop)) {
-      padding: $padding_Y calc($padding_X * 2.5);
-  } */
 }
 @media (min-width: 768px) {
   .footer__wrapper {
