@@ -6,12 +6,6 @@ $color-gray: rgb(229, 229, 229);
 
 $gray-text: rgb(88, 88, 88);
 
-@function gradient($from, $to) {
-    $gradient: linear-gradient(170deg, $from 0%, $to 100%);
-    @return $gradient
-}
-
-
 $gap: 1.5rem;
 $radius: 1.25rem;
 
