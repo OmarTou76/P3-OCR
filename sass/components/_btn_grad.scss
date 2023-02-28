@@ -8,7 +8,7 @@
     border: none;
     @include shadow;
     @include gradient($color-secondary, $color-primary);
-    transition: box-shadow .5s;
+    transition: box-shadow 200ms;
 
     &:hover {
         @include gradient(lighten($color-secondary, 6%), lighten($color-primary, 6%));
